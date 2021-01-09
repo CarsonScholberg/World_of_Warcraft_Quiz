@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Warcraft Quiz</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
+    
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" id="navbarViewId">View Highscores</a>
+          <p class="float-right">Time: <span id="time-remaining"></span></p>
+        </div>
+    </nav>
+    <!-- Questions and answers container -->
+    <div class="container hidden" id="QandA">
+        <h3 id="question">Questions</h3>
+        <!-- Multiple choice questions -->
+        <button class="btn btn-danger" id="options">Answer 1</button>
+        <button class="btn btn-danger" id="options">Answer 2</button>
+        <button class="btn btn-danger" id="options">Answer 3</button>
+        <button class="btn btn-danger" id="options">Answer 4</button>
+    </div>
+    <!-- Correct answer checker -->
+    <div class="container hidden" id="accuracyContainerId">
+        <h5 class="accuracy" id="accuracyId"></h5>
+    </div>
+    <!-- Initials and score container after the quiz is finished -->
+    <div class="container hidden" id="initialInputContainer">
+        <h2>All done!</h2>
+        <p>Your final score is: <span id="finalScore">0</span></p>
+        <p>Enter initials:
+            <input type="text" class="form-control" width="450" id="initialsInput">
+            <!-- Submit highscore button -->
+            <button class="btn btn-success" id="saveLocally">Submit</button>
+        </p>
+    </div>
+    <!-- Highscores list container -->
+    <div class="container hidden" id="highscoresContainerId">
+        <div id="innerHSContId">
+            <h3>Highscores</h3>
+            <ol id="scoresListId" type="1"></ol>
+        </div>
+        <p>
+            <!-- Restart and clear highscore buttons -->
+            <button class="btn btn-success" id="restartId">Restart</button>
+            <button class="btn btn-success" id="clearScoreId">Clear Highscores</button>
+        </p>
+    </div>
+
+    <!-- Title page container -->
+    <div class="container" id="startingScreenId">
+        <h1>The World of Warcraft Quiz</h1>
+        <p>Great tae meet ya! Think you know your World of Warcraft lore? Test your knowledge with this 10 question quiz! 
+            Can your parse higher than your friends? Now, off with ye!</p>
+            <!-- Start quiz button -->
+        <button class="btn btn-success" id="startQuizBtnId">Start Quiz</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
